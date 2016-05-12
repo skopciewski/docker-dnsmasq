@@ -12,7 +12,7 @@ Redirects all params to the `dnsmasq` command. Workdir is `/opt/dnsmasq`.
 ### Default params
 
 ```bash
-    --C dnsmasq.conf
+    -d -C dnsmasq.conf
 ```
 
 ### Escape to

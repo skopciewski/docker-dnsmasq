@@ -10,4 +10,4 @@ WORKDIR ${DNSMASQ_HOME}
 EXPOSE 53/udp
 
 ENTRYPOINT ["/entrypoint"]
-CMD ["-C", "dnsmasq.conf"]
+CMD ["-d", "-C", "dnsmasq.conf"]

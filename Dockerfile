@@ -1,4 +1,4 @@
-FROM gliderlabs/alpine:3.3
+FROM gliderlabs/alpine:3.4
 
 RUN apk-install dnsmasq bash
 COPY data/entrypoint /entrypoint

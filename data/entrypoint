@@ -10,10 +10,6 @@ run_escape_to() {
   exec "$@"
 }
 
-get_interface_name() {
-  echo $(ip -4 -o addr | grep -v "\bbrd\b" | grep -v "\blo\b" | cut -d' ' -f2 | sed -n '1p')
-}
-
 run_dnsmasq() {
   exec dnsmasq "$@"
 }

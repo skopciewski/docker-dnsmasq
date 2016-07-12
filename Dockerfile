@@ -5,7 +5,7 @@ COPY data/entrypoint /entrypoint
 RUN chmod 755 /entrypoint
 
 ENV DNSMASQ_HOME /opt/dnsmasq
-VOLUME [${DNSMASQ_HOME}]
+VOLUME ["${DNSMASQ_HOME}"]
 WORKDIR ${DNSMASQ_HOME}
 EXPOSE 53/udp
 

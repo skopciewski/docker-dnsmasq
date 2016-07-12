@@ -27,4 +27,3 @@ If you want to execute other command than `dnsmasq`, run docker container with `
 
 * mount /opt/dnsamq with:
   * dnsmasq.conf - dnsmasq config file
-

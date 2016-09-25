@@ -11,7 +11,7 @@ run_escape_to() {
 }
 
 run_dnsmasq() {
-  exec dnsmasq "$@"
+  dnsmasq "$@"
 }
 
 main() {

@@ -1,13 +1,12 @@
 ## Usage
 
 ```bash
-    docker create --name dnsmasq_data -v /my/dnsmasq_dir:/opt/dnsmasq busybox
-    docker run -d --rm --name dnsmasq -p 53:53/udp --volumes-from dnsmasq_data skopciewski/dnsmasq
+    docker run -d --rm --name dnsmasq -p 53:53/udp -v /my/dnsmasq_dir:/mnt/dnsmasq skopciewski/dnsmasq
 ```
 
 ## Entrypoint
 
-Redirects all params to the `dnsmasq` command. Workdir is `/opt/dnsmasq`.
+Redirects all params to the `dnsmasq` command. Workdir is `/mnt/dnsmasq`.
 
 ### Default params
 
@@ -20,10 +19,10 @@ Redirects all params to the `dnsmasq` command. Workdir is `/opt/dnsmasq`.
 If you want to execute other command than `dnsmasq`, run docker container with `escto` as first param:
 
 ```bash
-    docker run -it --rm --name dnsmasq -p 52:52/udp --volumes-from dnsmasq_data skopciewski/dnsmasq escto sh
+    docker run -it --rm --name dnsmasq -p 52:52/udp -v /my/dnsmasq_dir:/mnt/dnsmasq skopciewski/dnsmasq escto sh
 ```
 
 ## Dependencies and requirements
 
-* mount /opt/dnsamq with:
+* mount /mnt/dnsamq with:
   * dnsmasq.conf - dnsmasq config file

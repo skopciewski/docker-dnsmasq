@@ -4,8 +4,7 @@ RUN apk-install dnsmasq bash
 COPY data/entrypoint /entrypoint
 RUN chmod 755 /entrypoint
 
-ENV DNSMASQ_HOME /opt/dnsmasq
-VOLUME ["${DNSMASQ_HOME}"]
+ENV DNSMASQ_HOME /mnt/dnsmasq
 WORKDIR ${DNSMASQ_HOME}
 EXPOSE 53/udp
 

@@ -1,6 +1,6 @@
-FROM gliderlabs/alpine:3.4
+FROM alpine:3.5
 
-RUN apk-install dnsmasq bash
+RUN apk add --no-cache dnsmasq bash
 COPY data/entrypoint /entrypoint
 RUN chmod 755 /entrypoint
 
